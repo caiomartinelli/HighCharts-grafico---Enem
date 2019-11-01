@@ -1,0 +1,344 @@
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+HK|Open+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+HK|Open+Sans:400,700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0">
+<title>Hhhhhh</title>
+<link rel="stylesheet" type="text/css" href="style4.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
+<script src="sketch.js"></script>
+<script src="p5.play.js"></script>
+<script src="highcharts.js"></script>
+<script src="data.js"></script>
+<script src="drilldown.js"></script>
+<script src="exporting.js"></script>
+
+
+<style type="text/css">
+
+</style>
+
+
+</head>
+
+<body>
+
+
+<div id="container">
+    
+<div id="container11"></div>
+
+<div id="container12"></div>
+
+</div>
+
+
+
+<script type="text/javascript">
+
+Highcharts.setOptions({
+
+                                    lang: {
+
+                                        decimalPoint: ',',
+
+                                        thousandsSep: '.',
+
+                                        shortMonths: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"],
+
+                                        months: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+
+                                    }
+
+                                });
+
+
+
+
+
+Highcharts.chart('container11', {
+
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: ''
+    },
+    xAxis: {
+        categories: ['Muito pobres no topo do Enem', 'Topo do Enem em geral', 'Muito pobres em geral', 'Total geral do Enem']
+    },
+    yAxis: {
+        min: 0,
+        max:100,
+        title: {
+            text: ''
+        },
+
+
+
+
+      
+    },
+
+
+    
+    legend: {
+
+
+         borderWidth: 0,
+itemWidth:200,
+         symbolRadius: 0,
+
+        itemStyle: {
+            fontSize:'12px',
+            color: '#000000',
+            letterSpacing: "-0.02em",
+            fontWeight: 'light'
+        },
+itemMarginTop: 7,
+        align: 'center',
+        x: 0,
+        verticalAlign: 'top',
+        y:45,
+        floating: false,
+        backgroundColor:
+            Highcharts.defaultOptions.legend.backgroundColor || 'white',
+        borderColor: '#CCC',
+     padding: 25,
+        borderWidth: 0,
+      
+         fontWeight: 'normal',
+        shadow: false
+    },
+
+      tooltip: {
+
+          style: {
+            color: 'white',
+            fontWeight: 'bold'
+        },
+       
+        headerFormat: '<b>{point.x}</b><br/>',
+        pointFormat: '{series.name}: {point.y}<br/> ',
+         backgroundColor: 'rgba(37, 37, 37, 0.8)'
+
+       
+    },
+
+
+
+    plotOptions: {
+        column: {
+            borderWidth:0,
+            stacking: 'normal',
+            dataLabels: {
+                enabled: false
+            }
+        }
+    },
+
+
+
+
+    series: [{
+        name: 'Nunca estudou',
+        color: 'blue',
+        data: [8.7  ,0.5, 13, 5.6]
+    }, {
+        name: 'Fundamental incompleto',
+        color: '#0092b1',
+        data: [46.2,  10.1, 46.3, 36.8]
+    }, {
+        name: 'Médio incompleto',
+        color: '#006a87',
+        data: [12.4, 7.6,  10.2, 11.9]
+        
+        }, {
+       name: 'Médio completo' , 
+       color: '#acffff',
+        data: [18.3,  31.3, 15.4, 26]
+        
+        
+                 }, {
+       name: 'Ensino superior',
+       color: '#44c8fe',
+        data: [2.6, 26.4, 1.8 ,7]    
+        
+                        }, {
+       name: 'Pós-graduação.',
+       color: '#111111',
+        data: [0.8, 20.8  ,0.9  ,3.8]    
+        
+               }, {
+       name: 'Não sei',
+       color: '#002e77',
+        data: [11, 3.3,  12.5,  8.8]     
+        
+        
+        
+    }]
+
+
+   
+    
+    
+    
+});
+
+
+Highcharts.chart('container12', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: '',
+          fontWeight: '700',
+        fontSize:'24px',
+    },
+    xAxis: {
+        categories: ['Muito pobres no topo do Enem', 'Topo do Enem em geral', 'Muito pobres em geral', 'Total geral do Enem']
+    },
+
+
+    yAxis: {
+        min: 0,
+        max:100,
+        title: {
+            text: ''
+        },
+        stackLabels: {
+            enabled: true,
+            style: {
+                fontWeight: 'bold',
+               
+                color: ( // theme
+                    Highcharts.defaultOptions.title.style &&
+                    Highcharts.defaultOptions.title.style.color
+                ) || 'gray'
+            }
+        }
+    },
+
+
+    
+  legend: {
+
+
+         borderWidth: 0,
+itemWidth:200,
+         symbolRadius: 0,
+
+        itemStyle: {
+            fontSize:'12px',
+            color: '#000000',
+            letterSpacing: "-0.02em",
+            fontWeight: 'light'
+        },
+itemMarginTop: 7,
+        align: 'center',
+        x: 0,
+        verticalAlign: 'top',
+        y:45,
+        floating: false,
+        backgroundColor:
+            Highcharts.defaultOptions.legend.backgroundColor || 'white',
+        borderColor: '#CCC',
+     padding: 25,
+        borderWidth: 0,
+      
+         fontWeight: 'normal',
+        shadow: false
+    },
+
+    tooltip: {
+
+          style: {
+            color: 'white',
+            fontWeight: 'bold'
+        },
+       
+        headerFormat: '<b>{point.x}</b><br/>',
+        pointFormat: '{series.name}: {point.y}<br/> ',
+         backgroundColor: 'rgba(37, 37, 37, 0.8)'
+
+       
+    },
+
+
+
+
+    plotOptions: {
+        column: {
+            borderWidth:0,
+            stacking: 'normal',
+            dataLabels: {
+                enabled: false
+            }
+        }
+    },
+
+
+
+
+    series: [{
+        name: 'Nunca estudou',
+        color: '#c4170c',
+        data: [4.4  ,0.2, 10, 3.9]
+    }, {
+        name: 'Fundamental incompleto',
+        color: '#d15e91',
+        data: [36.1,  26,  42.6, 30.8]
+    }, {
+        name: 'Médio incompleto',
+        color: '#111111',
+        data: [17.3,  5.8,  13.3, 13.4]
+        
+        },  {
+       name: 'Médio completo' , 
+       color: '#690038',
+        data: [31.4,  30.4, 22.3, 32.3]
+        
+        
+                 }, {
+       name: 'Ensino superior',
+       color: '#ffcbfb',
+        data: [5.8, 29.1, 3.4 ,9.6]    
+        
+                        }, {
+       name: 'Pós-graduação.',
+       color: '#ff7150',
+        data: [2, 27.6  ,2.1  ,7]    
+        
+               }, {
+       name: 'Não sei',
+       color: '#ff0097',
+        data: [3, 1,  6.3,  3]     
+        
+        
+        
+    }]
+
+
+   
+    
+    
+    
+});
+
+
+
+
+</script>
+
+
+ 
+
+</div>
+
+
+</body>
+</html>

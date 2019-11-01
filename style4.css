@@ -1,0 +1,129 @@
+*{
+
+font-family: Open Sans;
+
+
+}
+
+
+#container11,#container12,#container{
+position: relative;
+display: block;
+height: 800px;
+max-width: 600px;
+float:left;
+margin: 0px auto 0 auto;
+}
+
+
+#container{
+position: relative;
+display: block;
+max-width:1200px;
+margin: 34px auto 20px auto;
+background-color: grey;
+
+}
+
+
+/*----------------------------------------MOBILES ----------------------------------------------------------------*/
+
+
+@media screen and (max-width: 359px) and (min-width: 320px){
+
+
+#container11,#container12,#container{
+position: relative;
+display: block;
+max-width: 320px;
+margin: 0 auto;
+clear:left;
+margin: 0px auto 0 auto;
+}
+
+
+
+
+}
+
+
+
+
+
+@media screen and (max-width: 410px) and (min-width: 360px){
+
+
+
+#container11,#container12,#container{
+
+max-width: 360px;
+margin: 0 auto;
+clear:left;
+margin: 0px auto 0 auto;
+}
+
+
+
+
+}
+
+
+
+@media screen and (max-width: 414px) and (min-width: 411px){
+
+#container11,#container12,#container{
+
+max-width: 411px;
+margin: 0 auto;
+clear:left;
+margin: 0px auto 0 auto;
+}
+
+
+
+
+
+}
+
+
+
+
+
+
+/*----------------------------------------IPAD----------------------------------------------------------------*/
+
+@media screen and (max-width: 1023px) and (min-width: 768px){
+
+
+#container11,#container12,#container{
+
+width: 768px;
+margin: 0 auto;
+clear:left;
+margin: 0px auto 0 auto;
+}
+
+
+
+
+
+}
+
+
+/*----------------------------IPAD PRO--------------------------------------------------------------------*/
+
+@media screen and (max-width: 1200px) and (min-width: 1024px){
+
+
+
+#container11,#container12,#container{
+
+max-width: 430px;
+margin: 0 auto;
+float:left;
+margin: 0px auto 0 auto;
+}
+
+
+}
+
